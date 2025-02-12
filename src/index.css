@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdp {
+  --rdp-cell-size: 45px;
+  --rdp-accent-color: #3b82f6;
+  --rdp-background-color: #e5e7eb;
+  --rdp-accent-color-dark: #60a5fa;
+  --rdp-background-color-dark: #374151;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.dark .rdp {
+  --rdp-accent-color: var(--rdp-accent-color-dark);
+  --rdp-background-color: var(--rdp-background-color-dark);
+}
+
+.rdp-months {
+  justify-content: center;
+}
+
+.rdp-month {
+  background-color: transparent;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.rdp-caption_label {
+  @apply text-lg font-semibold;
+}
+
+.rdp-nav {
+  white-space: nowrap;
+}
+
+.rdp-nav_button {
+  @apply w-8 h-8 rounded-full flex items-center justify-center transition-colors;
+  color: var(--rdp-accent-color);
+}
+
+.rdp-nav_button:hover {
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-head_cell {
+  @apply font-medium text-sm text-gray-500 dark:text-gray-400;
+  padding: 0.5rem;
+}
+
+.rdp-cell {
+  padding: 0;
+}
+
+.rdp-day {
+  @apply w-10 h-10 text-sm font-medium transition-all duration-200;
+  margin: 0.15rem;
+}
+
+.rdp-day:not(.rdp-day_selected):hover {
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-day_today:not(.rdp-day_outside) {
+  @apply font-bold;
+  position: relative;
+}
+
+.rdp-day_today:not(.rdp-day_outside):after {
+  content: '';
+  @apply absolute bottom-1 left-1/2 w-1 h-1 bg-blue-500 rounded-full -translate-x-1/2;
+}
+
+.rdp-day_selected {
+  background-color: var(--rdp-accent-color) !important;
+  @apply text-white shadow-lg shadow-blue-500/30;
+}
+
+.rdp-day_selected:hover {
+  background-color: var(--rdp-accent-color) !important;
+  opacity: 0.9;
+}
+
+.rdp-day_outside {
+  @apply text-gray-400 dark:text-gray-600;
+}
+
+.rdp-day_outside:hover {
+  background-color: transparent !important;
+}

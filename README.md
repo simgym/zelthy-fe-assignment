@@ -1,30 +1,75 @@
 <!-- DO NOT REMOVE EXISTING CONTENTS OF THIS FILE, EVEN IN YOUR REPOSITORY -->
+
 # Frontend assignment repository template
 
-This is a template repository for submitting assignment for the Frontend developer internship at Zelthy. All those who are submitting the frontend assignment must use this template.
+This is a template repository for submitting assignment for the Frontend developer internship at Zelthy.
 
 Assignment link: https://zelthy.com/assignments/frontend-intern
 
 Submission form: https://forms.gle/o8tUdshRWS33tg8X6
 
-### How to use this template?
+## Vite React TypeScript Starter
 
-1. If you are reading this on GitHub, click the "use this template" dropdown in the top right corner of the page and select "Create a new repository".
-<img width="1470" alt="Screenshot 2025-02-07 at 6 10 26 PM" src="https://github.com/user-attachments/assets/360f44ae-57e8-4c47-b768-cbfd95b3aa0a" />
+A starter project using Vite, React, TypeScript, and Tailwind CSS.
+
+### Features
+
+Fast development with Vite
+
+Type safety with TypeScript
+
+Styling with Tailwind CSS
+
+## Installation & Setup
+
+### Clone the Repository
+
+1. If you are reading this on GitHub, click the "code" dropdown in the top right corner of the page and select "Create a new repository".
 
 2. Next you will be redirected to create a new repository page on GitHub with this repository as a template. Fill the repository name and description and click "Create repository".
-<img width="1470" alt="Screenshot 2025-02-07 at 3 09 25 PM" src="https://github.com/user-attachments/assets/17bd7a00-99fb-4ff6-8003-4b96506189f3" />
 
 3. And thats it! A new repository using this template has been created for you!
 
-### How to submit the assignment?
+### Install Dependencies
 
-1. Clone the repository that you created using the instructions above.
+npm install
 
-2. Add and commit your changes to that repository.
+### Start Development Server
 
-3. Push the changes to github.
+npm run dev
 
-4. Go to the submission form and fill the details and submit the assignment.
+## Configuration
+
+### Tailwind CSS
+
+Ensure Tailwind CSS is properly set up:
+
+npx tailwindcss init -p
+
+If styles are not working, check tailwind.config.js and ensure the content paths are correct.
+
+## Usage
+
+- **Header Features**
+
+  - Contains navigation options and a theme toggle button.
+
+- **User List & Availability**
+
+  - By default, you'll see a list of users.
+  - Click on a user to view their available time slots based on the selected date in the calendar.
+
+- **Managing Your Schedule**
+
+  - Click on **"Manage my schedule"** in the header to create, update, or delete your availability slots.
+
+- **Scheduling Settings**
+
+  - **Your Timezone:** Set your preferred timezone.
+  - **New Slot Time:** Define your availability slots.
+
+- **Copying Available Slots**
+  - To copy time slots for a specific day, click the **Copy All** under the **Available Slots** section.
+  - The copy button appears only if slots exist for that day.
 
 ## Happy coding!
